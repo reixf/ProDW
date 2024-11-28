@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Slides</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.slider {
+    width: 300px; /* Ancho fijo */
+    height: 430px; /* Alto fijo */
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	margin: 0 auto; /* Centra el slider horizontalmente */
+    justify-content: center; /* Centra el contenido interno */
+	
+	}
+
+.slider-images {
+    display: flex;
+    transition: margin-left 1s ease; /* Transición suave */
+    width: calc(300px * 3); /* Ancho total del contenedor (cantidad de imágenes * ancho de slider) */
+}
+
+.slider-images img {
+    width: 300px; /* Ancho fijo, igual al del slider */
+    height: 430px; /* Alto fijo, igual al del slider */
+    display: block; /* Evita márgenes */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+</style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slider-images">
+            <img src="Imagenes/Peliculas/imagen1.jpg" alt="Película 1" />
+            <img src="Imagenes/Peliculas/imagen5.jpg" alt="Película 2" />
+            <img src="Imagenes/Peliculas/imagen3.jpg" alt="Película 3" />
+            <img src="Imagenes/Peliculas/imagen4.jpg" alt="Película 4" />
+            <img src="Imagenes/Peliculas/imagen5.jpg" alt="Película 5" />
+            <img src="Imagenes/Peliculas/imagen6.jpg" alt="Película 6" />
+        </div>
+        <button class="prev">⟨</button>
+        <button class="next">⟩</button>
+    </div>
+
+    <script>
+        // Variables
+var sliderImages = document.querySelector('.slider-images');
+var images = document.querySelectorAll('.slider-images img');
+var prevButton = document.querySelector('.prev');
+var nextButton = document.querySelector('.next');
+var currentIndex = 0;
+
+// Calcula dinámicamente el ancho total de .slider-images basado en la cantidad de imágenes
+var totalImages = images.length;
+sliderImages.style.width = totalImages * 300 + 'px'; // 300px es el ancho de cada imagen
+
+// Función para mover el slider
+function updateSlider() {
+    sliderImages.style.marginLeft = '-' + currentIndex * 300 + 'px'; // Cambia el margen según el índice
+}
+
+// Evento para botón "Prev"
+prevButton.onclick = function() {
+    currentIndex = (currentIndex === 0) ? totalImages - 1 : currentIndex - 1;
+    updateSlider();
+    resetAutoSlide(); // Reinicia el temporizador
+};
+
+// Evento para botón "Next"
+nextButton.onclick = function() {
+    currentIndex = (currentIndex === totalImages - 1) ? 0 : currentIndex + 1;
+    updateSlider();
+    resetAutoSlide(); // Reinicia el temporizador
+};
+
+// Movimiento automático
+function autoSlide() {
+    currentIndex = (currentIndex === totalImages - 1) ? 0 : currentIndex + 1;
+    updateSlider();
+}
+
+// Temporizador para movimiento automático
+var autoSlideInterval = setInterval(autoSlide, 3000); // Cambia cada 3 segundos
+
+// Reiniciar el temporizador si el usuario navega manualmente
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    autoSlideInterval = setInterval(autoSlide, 3000);
+}
+
+// Inicialización
+updateSlider();
+
+    </script>
+</body>
+</html>

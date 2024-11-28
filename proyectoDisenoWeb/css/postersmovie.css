@@ -1,0 +1,54 @@
+/* Cuadrícula de las películas */
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px 0;
+}
+
+/* Estilo para las imágenes de las películas */
+.movie {
+    width: 280px;
+    height: auto; /* Permite que el contenedor crezca según el contenido */
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #ddd;
+    text-align: center; /* Centra el texto del título */
+}
+
+.movie img {
+    width: 100%;
+    height: 400px; /* Tamaño fijo de las imágenes */
+    object-fit: cover;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Mostrar el texto "Próximamente" solo si no hay imagen */
+.movie:not(:has(img))::before {
+    content: ""; /* Texto para los marcadores vacíos */
+    position: absolute;
+    display: block;
+    color: #aaa;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1;
+}
+
+.movie-title {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}

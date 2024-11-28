@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Info1</title>
+<link rel="shortcut icon" href="Imagenes/Inicio/icono_001.png" type="image/x-icon"/>
+<style>
+@charset "utf-8";
+
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #000;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+/* Encabezado principal (navegación) */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0078D4;
+    padding: 10px 20px;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 10px;
+}
+
+.menu a {
+    color: #fff;
+    padding: 10px 15px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #fff;
+    color: #0078D4;
+}
+
+/* Encabezado del contenido */
+.header_titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    color: #003399;
+    border-bottom: 1px solid #ccc;
+}
+
+.header_titulo h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.header_titulo .btn-atras {
+    margin-left: auto; /* Empuja el botón hacia el lado derecho */
+    padding: 10px 15px;
+    background-color: #ddd;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Contenido Principal */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.poster {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.poster-placeholder {
+    width: 100px;
+    height: 150px;
+    background-color: #eaeaea;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.btn-cartelera {
+    padding: 10px 15px;
+    background-color: #003399;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cast, .horario {
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.descripcion {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.trailer {
+    margin-top: 20px;
+}
+
+.trailer h2 {
+    font-size: 24px;
+    color: #0078D4;
+}
+
+.trailer-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #eaeaea;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+}
+
+/* Pie de Página */
+.footer {
+    background-color: #0078D4;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    max-width: 150px;
+}
+
+.contenedor-loggin {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 5px 10px;
+    background-color: transparent;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: right;
+    font-size: 16px;
+}
+</style>
+</head>
+<body>
+    <div class="contenedor-loggin">
+        <a href="#">Iniciar sesión</a>
+    </div>
+    <header class="header">
+        <div class="logo">
+            <a href="Index.html"><img src="Imagenes/Inicio/Logo-001.png" width="240" height="61" /></a>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="Peliculas.html">Películas</a></li>
+                <li><a href="#">Cartelera</a></li>
+                <li><a href="#">Promociones</a></li>
+                <li><a href="#">Cines</a></li>
+                <li><a href="#">Dulcerías</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="header_titulo">
+            <h1>Título de película</h1>
+            <button class="btn-atras" onclick="location.href='Peliculas.html';">Atrás</button>
+        </div>
+        <div class="main-content">
+            <div class="poster">
+                <div class="poster-placeholder">Póster de película</div>
+            </div>
+            <div class="info">
+                <div class="cast">Cast</div>
+                <div class="horario">Horario</div>
+            </div>
+        </div>
+        <div class="descripcion">
+            <p>Descripción</p>
+        </div>
+        <div class="trailer">
+            <h2>Trailer</h2>
+            <div class="trailer-placeholder">Video no disponible</div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-center">
+            <div class="logo">
+                <a href="Index.html"><img src="Imagenes/Inicio/Logo-002.png" width="916" height="203" /></a>
+            </div>
+        </div>
+        <div class="footer-center"><p>Derechos reservados por Chilopolis 2024</p></div>
+    </footer>
+</body>
+</html>
