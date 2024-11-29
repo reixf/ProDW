@@ -1,0 +1,36 @@
+.content-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.content-item {
+    display: flex;
+    align-items: center;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.image {
+    flex: 0 0 120px; /* Tamaño fijo para las imágenes */
+    margin-right: 15px;
+}
+
+.image img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.description {
+    flex: 1;
+    text-align: left;
+}
+
+.description p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
