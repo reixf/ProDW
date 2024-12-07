@@ -1,18 +1,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Chilopolis</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Chilopolis</title>
+    <link rel="shortcut icon" href="../Imagenes/Inicio/icono_001.png" type="image/x-icon" />
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <link href="../css/schedule.css" rel="stylesheet" type="text/css">
 </head>
-<link rel="shortcut icon" href="../Imagenes/Inicio/icono_001.png" type="image/x-icon"/>
-<link href="../css/styles.css" rel="stylesheet" type="text/css">
 <body>
-<div class="contenedor-loggin">
-    <a href="#">Iniciar sesion</a>
+    <div class="contenedor-loggin">
+        <a href="#">Iniciar sesión</a>
     </div>
     <header class="header">
         <div class="logo">
-        <a href="../Index.html"><img src="../Imagenes/Inicio/Logo-001.png" width="240" height="61" /></a>
+            <a href="../Index.html"><img src="../Imagenes/Inicio/Logo-001.png" width="240" height="61" /></a>
         </div>
         <nav class="menu">
             <ul>
@@ -20,13 +21,101 @@
                 <li><a href="#">Cartelera</a></li>
                 <li><a href="#">Promociones</a></li>
                 <li><a href="#">Cines</a></li>
-                <li><a href="#">Dulcerias</a></li>
+                <li><a href="#">Dulcerías</a></li>
             </ul>
         </nav>
     </header>
+
+    <div class="container">
+        <header class="movie-header">
+            <h1>Alien Romulus</h1>
+            <button class="btn-back">Atrás</button>
+        </header>
+        <main class="content">
+            <div class="poster-description-container">
+                <div class="poster">
+                    <img src="../Imagenes/Peliculas/imagen1.jpg" alt="Póster de la película">
+                </div>
+                <div class="description">
+                    <p>
+                        Descripción de la película: Un emocionante viaje lleno de acción y aventura que llevará al espectador a explorar nuevos mundos y enfrentar desafíos inesperados.
+                    </p>
+                </div>
+            </div>
+            <h2 class="schedule-title">Horarios - Diciembre</h2>
+            <div class="schedule">
+                <div class="days">
+                    <button class="day-btn active" data-day="lunes">Lunes 19</button>
+                    <button class="day-btn" data-day="martes">Martes</button>
+                    <button class="day-btn" data-day="miercoles">Miércoles</button> <!-- Nuevo botón -->
+                </div>
+                <div class="times-container">
+                    <!-- Contenido dinámico para Lunes -->
+                    <div class="day-content" id="lunes">
+                        <div class="time-slot">
+                            <span class="format">2D</span>
+                            <a href="compra.html?hora=10:00&idioma=sub" class="btn-time">10:00 AM</a> <!-- colocar enlace de la compra de tickets -->
+                            <span class="language">Sub</span>
+                            <button class="btn-time">12:00 PM</button>
+                            <span class="language">Doblado</span>
+                        </div>
+                        <div class="time-slot">
+                            <span class="format">3D</span>
+                            <button class="btn-time">02:00 PM</button>
+                            <span class="language">Sub</span>
+                            <button class="btn-time">04:00 PM</button>
+                            <span class="language">Doblado</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Contenido dinámico para Martes -->
+                    <div class="day-content hidden" id="martes">
+                        <div class="time-slot">
+                            <span class="format">2D</span>
+                            <button class="btn-time">11:00 AM</button>
+                            <span class="language">Sub</span>
+                            <button class="btn-time">01:00 PM</button>
+                            <span class="language">Doblado</span>
+                        </div>
+                        <div class="time-slot">
+                            <span class="format">3D</span>
+                            <button class="btn-time">03:00 PM</button>
+                            <span class="language">Sub</span>
+                            <button class="btn-time">05:00 PM</button>
+                            <span class="language">Doblado</span>
+                        </div>
+                    </div>
+                    <!-- Ejemplode como colocar nuevos dias en el menu -->
+                    <div class="day-content hidden" id="miercoles">
+                        <div class="time-slot">
+                            <span class="format">2D</span>
+                            <button class="btn-time">09:00 AM</button>
+                            <span class="language">Sub</span>
+                            <button class="btn-time">11:00 AM</button>
+                            <span class="language">Doblado</span>
+                        </div>
+                        <div class="time-slot">
+                            <span class="format">3D</span>
+                            <button class="btn-time">01:00 PM</button>
+                            <span class="language">Sub</span>
+                            <button class="btn-time">03:00 PM</button>
+                            <span class="language">Doblado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
     <footer class="footer">
-    <div class="footer-center"><div class="logo"><a href="../Index.html"><img src="../Imagenes/Inicio/Logo-002.png" width="916" height="203" /></a></div></div>
-    <div class="footer-center"><p>Derechos reservador por Chilopolis 2024</p></div>
-	</footer>
+        <div class="footer-center">
+            <div class="logo">
+                <a href="../Index.html"><img src="../Imagenes/Inicio/Logo-002.png" width="916" height="203" /></a>
+            </div>
+        </div>
+        <div class="footer-center">
+            <p>Derechos reservados por Chilopolis 2024</p>
+        </div>
+    </footer>
+    <script src="../js/schedule.js"></script>
 </body>
 </html>
