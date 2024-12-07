@@ -35,15 +35,18 @@
 
 /* Mostrar el texto "Próximamente" solo si no hay imagen */
 .movie:not(:has(img))::before {
-    content: ""; /* Texto para los marcadores vacíos */
+    content: "Proximamente"; /* Texto para los marcadores vacíos */
     position: absolute;
-    display: block;
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajusta el origen al centro */
     color: #aaa;
     font-size: 18px;
     font-weight: bold;
     text-align: center;
     z-index: 1;
 }
+
 
 .movie-title {
     margin-top: 10px;
