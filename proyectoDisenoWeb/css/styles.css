@@ -140,6 +140,47 @@
     text-align: right;
     font-size: 16px;
 	}
+
+	.promotions-grid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		gap: 20px; /* Espacio entre las tarjetas */
+	}
+	
+	.promo-card {
+		background: #fff;
+		border: 1px solid #ccc;
+		box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+		width: calc(50% - 20px); /* Ajuste para dos columnas, contando el espacio */
+		margin-bottom: 20px;
+	}
+	
+	.promo-card img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	
+	.promo-info {
+		padding: 10px;
+	}
+	
+	.detail-button {
+		display: block;
+		background-color: #ff6347;
+		color: white;
+		text-align: center;
+		padding: 10px;
+		text-decoration: none;
+		margin-top: 10px;
+	}
+	
+	.detail-button:hover {
+		background-color: #e05340;
+	}
+	
+	
 	
 	
 	
