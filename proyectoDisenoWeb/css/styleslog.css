@@ -1,0 +1,161 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0078D4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #000;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.title {
+    font-size: 2em;
+    color: #FFD700;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #0078D4;
+    outline: none;
+}
+
+button.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #0078D4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.btn:hover {
+    background-color: #005bb5;
+}
+
+p.link {
+    margin-top: 10px;
+    text-align: center;
+}
+
+p.link a {
+    color: #0078D4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p.link a:hover {
+    text-decoration: underline;
+}
+.btn-back {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #ddd;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-back:hover {
+    background-color: #ccc;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    text-align: left;
+}
+
+/* Contenedor para los botones */
+.form-buttons {
+    display: flex;
+    justify-content: space-between; /* Distribuye los botones a los lados */
+    margin-top: 20px;
+}
+
+/* Botón general */
+button {
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Botón "Registrar" */
+button.btn {
+    background-color: #0078D4;
+    color: #fff;
+}
+
+button.btn:hover {
+    background-color: #005bb5;
+}
+
+/* Botón "Atrás" */
+button.btn-back {
+    background-color: #ddd;
+    color: #000;
+}
+
+button.btn-back:hover {
+    background-color: #ccc;
+}
+
+.btn, .btn-back, a.btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none; /* Para el enlace */
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Botón "Registrar" */
+.btn {
+    background-color: #0078D4;
+    color: #fff;
+}

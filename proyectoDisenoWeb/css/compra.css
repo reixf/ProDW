@@ -1,0 +1,345 @@
+@charset "utf-8";
+
+body.compra {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Contenedor general para la sección de compra */
+.compra-container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Información de la película */
+.info-pelicula {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.info-pelicula img {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.info-pelicula h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.info-pelicula ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-pelicula ul li {
+    margin: 5px 0;
+}
+
+/* Pasos de la compra */
+.pasos {
+    flex: 2;
+}
+
+.paso {
+    display: none;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.paso:not(.hidden) {
+    display: block;
+}
+
+.paso h3 {
+    font-size: 1.2em;
+    color: #0078D4;
+    margin-bottom: 15px;
+}
+
+/* Boletos */
+.boletos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.boleto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.boleto img {
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.boleto span {
+    font-size: 1em;
+}
+
+.boleto .btn-minus,
+.boleto .btn-plus {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2em;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.boleto .contador {
+    font-size: 1.2em;
+    margin: 0 10px;
+}
+
+/* Selección de asientos */
+.asientos {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.asiento {
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.asiento.seleccionado {
+    background-color: #0078D4;
+    color: #fff;
+}
+
+.asiento.ocupado {
+    background-color: #bbb;
+    cursor: not-allowed;
+}
+
+/* Alimentos */
+.alimentos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.alimento {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.alimento img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.alimento .detalles {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.alimento .precio {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* Confirmación y pago */
+.confirmacion {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.confirmacion h3 {
+    font-size: 1.2em;
+    color: #0078D4;
+    margin-bottom: 15px;
+}
+
+/* Botones */
+.btn-next {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0078D4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-next:hover {
+    background-color: #005bb5;
+}
+
+.btn-finish {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-finish:hover {
+    background-color: #d62828;
+}
+/* Estilo para formularios alineados en columnas */
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    gap: 15px; /* Espaciado entre filas y columnas */
+}
+
+form label {
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form .btn-next {
+    grid-column: span 2;
+    justify-self: center;
+    padding: 10px 20px;
+    background-color: #0078D4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+form .btn-next:hover {
+    background-color: #005bb5;
+}
+
+.pago {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.pago input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.pago h4 {
+    grid-column: span 2;
+    font-size: 1.2em;
+    color: #0078D4;
+    margin-bottom: 10px;
+}
+
+.pago .btn-next {
+    grid-column: span 2;
+    justify-self: center;
+    padding: 10px 20px;
+    background-color: #0078D4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.pago .btn-next:hover {
+    background-color: #005bb5;
+}
+
+
+.resumen {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.resumen p {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+
+#paso6 {
+    text-align: center;
+}
+
+.qr-code img {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+    display: block;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+#paso6 .btn-next {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0078D4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#paso6 .btn-next:hover {
+    background-color: #005bb5;
+}
+
