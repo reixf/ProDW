@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Chilopolis - Tandas</title>
+<link rel="shortcut icon" href="Imagenes/Inicio/icono_001.png" type="image/x-icon" />
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/schedule.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="contenedor-loggin">
+<a href="Iniciodesesion.html">Iniciar sesión</a>
+</div>
+<header class="header">
+<div class="logo">
+<a href="Index.html"><img src="Imagenes/Inicio/Logo-001.png" width="240" height="61" /></a>
+</div>
+<nav class="menu">
+<ul>
+<li><a href="Peliculas.html">Películas</a></li>
+<li><a href="cartelera.html">Cartelera</a></li>
+<li><a href="Promociones.html">Promociones</a></li>
+<li><a href="#">Cines</a></li>
+<li><a href="#">Dulcerías</a></li>
+</ul>
+</nav>
+</header>
+
+<div class="container">
+<header class="movie-header">
+<h1>Especialista</h1>
+<button class="btn-back" onclick="location.href='cartelera.html';">Atrás</button>
+</header>
+<main class="content">
+<div class="poster-description-container">
+<div class="poster">
+<img src="Imagenes/Peliculas/imagen4.jpg" alt="Póster de la película">
+</div>
+<div class="description">
+<p>
+Estrenada el 24 de abril de 2024, la cinta está protagonizada por Ryan Gosling en el papel de Colt Seavers, un doble de acción que, tras un accidente que casi termina con su carrera, es reclutado para una nueva película dirigida por su exnovia, Jody Moreno, interpretada por Emily Blunt.
+</div>
+</div>
+<h2 class="schedule-title">Horarios - Diciembre</h2>
+<div class="schedule">
+<div class="days">
+<button class="day-btn active" data-day="lunes">Lunes</button>
+<button class="day-btn" data-day="martes">Martes</button>
+<button class="day-btn" data-day="jueves">Jueves</button> <!-- Nuevo botón -->
+</div>
+<div class="times-container">
+<!-- Contenido dinámico para Lunes -->
+<div class="day-content" id="lunes">
+<div class="time-slot">
+<span class="format">2D</span>
+<a href="compra_Pelicula004.html?hora=10:00&amp;idioma=sub" class="btn-time">10:00 AM</a> <!-- colocar enlace de la compra de tickets -->
+<span class="language">Sub</span>
+<a href="compra_Pelicula004.html?hora=12:00&amp;idioma=doblado" button class="btn-time">12:00 PM</a>
+<span class="language">Doblado</span>
+</div>
+<div class="time-slot">
+<span class="format">3D</span>
+<a href="compra_Pelicula004.html?hora=02:00&amp;idioma=sub" button class="btn-time">02:00 PM</a>
+<span class="language">Sub</span>
+<a href="compra_Pelicula004.html?hora=04:00&amp;idioma=sub" button class="btn-time">04:00 PM</a>
+<span class="language">Doblado</span>
+</div>
+</div>
+
+<!-- Contenido dinámico para Martes -->
+<div class="day-content hidden" id="martes">
+<div class="time-slot">
+<span class="format">2D</span>
+<a href="compra_Pelicula004.html?hora=11:00&amp;idioma=sub" button class="btn-time">11:00 AM</a>
+<span class="language">Sub</span>
+<a href="compra_Pelicula004.html?hora=01:00&amp;idioma=sub" button class="btn-time">01:00 PM</a>
+<span class="language">Doblado</span>
+</div>
+<div class="time-slot">
+<span class="format">3D</span>
+<a href="compra_Pelicula004.html?hora=03:00&amp;idioma=sub" button class="btn-time">03:00 PM</a>
+<span class="language">Sub</span>
+<a href="compra_Pelicula004.html?hora=05:00&amp;idioma=sub" button class="btn-time">05:00 PM</a>
+<span class="language">Doblado</span>
+</div>
+</div>
+<!-- Ejemplode como colocar nuevos dias en el menu -->
+<div class="day-content hidden" id="jueves">
+<div class="time-slot">
+<span class="format">2D</span>
+<a href="compra_Pelicula004.html?hora=09:00&amp;idioma=sub" button class="btn-time">09:00 AM</a>
+<span class="language">Sub</span>
+<a href="compra_Pelicula004.html?hora=11:00&amp;idioma=sub" button class="btn-time">11:00 AM</a>
+<span class="language">Doblado</span>
+</div>
+<div class="time-slot">
+<span class="format">3D</span>
+<a href="compra_Pelicula004.html?hora=01:00&amp;idioma=sub" button class="btn-time">01:00 PM</a>
+<span class="language">Sub</span>
+<a href="compra_Pelicula004.html?hora=03:00&amp;idioma=sub" button class="btn-time">03:00 PM</a>
+<span class="language">Doblado</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<footer class="footer">
+<div class="footer-center">
+<div class="logo">
+<a href="Index.html"><img src="Imagenes/Inicio/Logo-002.png" width="916" height="203" /></a>
+</div>
+</div>
+<div class="footer-center">
+<p>Derechos reservados por Grupo 1 Chilopolis 2024</p>
+</div>
+</footer>
+<script src="js/schedule.js"></script>
+</body>
+</html>
